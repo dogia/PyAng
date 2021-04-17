@@ -1,0 +1,9 @@
+FROM python:3
+# Cambiamos de carpeta
+WORKDIR /usr/src/app
+
+# Copiamos los archivos necesarios
+COPY ./dependencies.txt ./
+
+# Instalamos las dependencias
+RUN pip install --no-cache-dir -r ./dependencies.txt
